@@ -1,0 +1,23 @@
+<odoo>
+
+    <menuitem
+        id="main_menu_agreement"
+        name="Agreement"
+        sequence="1"/>
+
+    <menuitem
+        id="menu_agreement"
+        name="Agreement"
+        parent="main_menu_agreement"
+        action="action_agreement"
+        sequence="1"/>
+
+    <menuitem
+        id="agreement_menu_settings"
+        name="Settings"
+        parent="main_menu_agreement"
+        action="action_agreement_type"
+        groups="agreement.group_agreement_manager"
+        sequence="3"/>
+
+</odoo>

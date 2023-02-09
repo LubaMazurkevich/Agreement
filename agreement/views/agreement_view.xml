@@ -1,0 +1,78 @@
+<odoo>
+
+    <record id="seq_agreement" model="ir.sequence">
+        <field name="name">Agreements</field>
+        <field name="code">agreement.agreement</field>
+        <field name="prefix"></field>
+        <field name="padding">6</field>
+        <field name="company_id" eval="False"/>
+    </record>
+
+    <record id="agreement_form" model="ir.ui.view">
+        <field name="name">agreement.agreement.form</field>
+        <field name="model">agreement.agreement</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="button_send_for_approval" type="object" string="Send for approval"
+                        class="oe_highlight" attrs="{'invisible': [('is_show_send_to_approval', '=', False)]}"/>
+                    <button name="button_approve" type="object" string="Approve"
+                        class="oe_highlight" groups="agreement.group_agreement_manager"
+                            attrs="{'invisible': [('state', '!=', 'approving')]}"/>
+                    <button name="button_send_for_revision" type="object" string="Send for revision"
+                        class="oe_highlight" groups="agreement.group_agreement_manager"
+                            attrs="{'invisible': [('state', '!=', 'approving')]}"/>
+                    <field name="state" widget="statusbar" statusbar_visible="draft,approving,active,done"/>
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <label for="number" string="Agreement Reference" class="oe_edit_only"/>
+                        <h1><field name="number" class="oe_inline"/></h1>
+                    </div>
+                    <group>
+                        <field name="is_show_send_to_approval" invisible="1"/>
+                        <field name="partner_id" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                        <field name="kind_id" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                        <field name="start_date" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                        <field name="end_date" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                        <field name="author_id" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="agreement_tree" model="ir.ui.view">
+        <field name="name">agreement.tree</field>
+        <field name="model">agreement.agreement</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="number"/>
+                <field name="partner_id"/>
+                <field name="kind_id" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                <field name="state" widget="badge"  decoration-info="state == 'approving' or state == 'active'"
+                       decoration-success="state == 'done'"/>
+                <field name="start_date"/>
+                <field name="end_date"/>
+                <field name="author_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_agreement" model="ir.actions.act_window">
+       <field name="name">Agreement</field>
+       <field name="res_model">agreement.agreement</field>
+       <field name="view_mode">tree,form</field>
+       <field name="help" type="html">
+           <p class="o_view_nocontent_smiling_face">
+               Create agreement
+           </p>
+       </field>
+    </record>
+
+</odoo>

@@ -1,0 +1,165 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* agreement
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-02-09 18:02+0000\n"
+"PO-Revision-Date: 2023-02-09 18:02+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+
+#. module: agreement
+#: model:ir.actions.act_window,name:agreement.action_agreement_type
+msgid "Agreement Types"
+msgstr "Виды договоров"
+
+#. module: agreement
+#: model:ir.model.fields,field_description:agreement.field_agreement_agreement__kind_id
+msgid "Agreement type"
+msgstr "Вид договора"
+
+#. module: agreement
+#: model:ir.model.fields.selection,name:agreement.selection__agreement_agreement__state__approving
+msgid "Approving"
+msgstr "На согласовании"
+
+#. module: agreement
+#: model:ir.actions.act_window,name:agreement.action_agreement
+#: model:ir.model,name:agreement.model_agreement_agreement
+#: model:ir.ui.menu,name:agreement.main_menu_agreement
+#: model:ir.ui.menu,name:agreement.menu_agreement
+msgid "Agreement"
+msgstr "Договоры"
+
+#. module: agreement
+#: model:ir.model.fields,field_description:agreement.field_agreement_agreement__number
+msgid "Number"
+msgstr "Номер"
+
+#. module: agreement
+#: model_terms:ir.ui.view,arch_db:agreement.agreement_form
+msgid "Send for approval"
+msgstr "Отправить на согласование"
+
+#. module: agreement
+#: model_terms:ir.ui.view,arch_db:agreement.agreement_form
+msgid "Send for revision"
+msgstr "Отправить на доработку"
+
+#. module: agreement
+#: model:ir.ui.menu,name:agreement.agreement_menu_settings
+msgid "Settings"
+msgstr "Настройки"
+
+#. module: agreement
+#: model_terms:ir.ui.view,arch_db:agreement.agreement_form
+msgid "Approve"
+msgstr "Согласовать"
+
+#. module: agreement
+#: code:addons/agreement/models/agreement.py:0
+#, python-format
+msgid "Contract start date must be earlier than contract end date."
+msgstr "Дата начала договора должна быть раньше даты окончания"
+
+#. module: agreement
+#: model_terms:ir.actions.act_window,help:agreement.action_agreement
+msgid "Create agreement"
+msgstr "Создать договор"
+
+#. module: agreement
+#: model_terms:ir.actions.act_window,help:agreement.action_agreement_type
+msgid "Create agreement type"
+msgstr "Создать тип договора"
+
+#. module: agreement
+#: model:ir.model.fields.selection,name:agreement.selection__agreement_agreement__state__done
+msgid "Done"
+msgstr "Завершен"
+
+#. module: agreement
+#: model:ir.model.fields.selection,name:agreement.selection__agreement_agreement__state__draft
+msgid "Draft"
+msgstr "Черновик"
+
+#. module: agreement
+#: model:res.groups,name:agreement.group_agreement_employee
+msgid "Employee"
+msgstr "Сотрудник"
+
+#. module: agreement
+#: model:ir.model.fields,field_description:agreement.field_agreement_agreement__end_date
+msgid "End Date"
+msgstr "Дата завершения"
+
+#. module: agreement
+#: model:ir.actions.server,name:agreement.ir_cron_change_state_agreements_action_ir_actions_server
+#: model:ir.cron,cron_name:agreement.ir_cron_change_state_agreements_action
+#: model:ir.cron,name:agreement.ir_cron_change_state_agreements_action
+msgid "Change state for agreements"
+msgstr "Завершить договора"
+
+#. module: agreement
+#: model:ir.model.fields,field_description:agreement.field_agreement_agreement__name
+#: model:ir.model.fields,field_description:agreement.field_agreement_type__name
+msgid "Name"
+msgstr "Название"
+
+#. module: agreement
+#: model:ir.model.fields,field_description:agreement.field_agreement_agreement__partner_id
+msgid "Client"
+msgstr "Клиент"
+
+#. module: agreement
+#: model:ir.model.fields,field_description:agreement.field_agreement_agreement__state
+msgid "State"
+msgstr "Статус"
+
+#. module: agreement
+#: model:ir.model.fields,field_description:agreement.field_agreement_agreement__start_date
+msgid "Start Date"
+msgstr "Дата начала"
+
+#. module: agreement
+#: model:ir.model.fields,field_description:agreement.field_agreement_agreement__author_id
+msgid "Author"
+msgstr "Автор"
+
+#. module: agreement
+#: model:ir.model.fields,field_description:agreement.field_agreement_type__active
+msgid "Active"
+msgstr "Активно"
+
+#. module: agreement
+#: model:ir.model.fields.selection,name:agreement.selection__agreement_agreement__state__active
+msgid "Active"
+msgstr "Активен"
+
+#. module: agreement
+#: model:ir.model.fields,help:agreement.field_agreement_agreement__author_id
+msgid "The user who created the contract"
+msgstr "Пользователь создавший договор"
+
+#. module: agreement
+#: model_terms:ir.ui.view,arch_db:agreement.agreement_form
+msgid "Agreement Reference"
+msgstr "Номер договора"
+
+#. module: agreement
+#: model:ir.model.constraint,message:agreement.constraint_agreement_type_name_uniq
+msgid "Agreement type with the same name already exists"
+msgstr "Тип договора с таким названием уже существует"
+
+#. module: agreement
+#: code:addons/agreement/models/agreement.py:0
+#, python-format
+msgid "Agreement %s sent to revision."
+msgstr "Договор %s отправлен на доработку"

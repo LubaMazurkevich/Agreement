@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_agreement_type_manager,access_agreement_type,model_agreement_type,agreement.group_agreement_manager,1,1,1,1
+access_agreement_type_employee,access_agreement_type,model_agreement_type,agreement.group_agreement_employee,1,0,0,0
+access_agreement_agreement,access_agreement_agreement,model_agreement_agreement,base.group_user,1,1,1,1

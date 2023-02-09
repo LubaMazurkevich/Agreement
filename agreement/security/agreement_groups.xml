@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="agreement.group_agreement_employee" model="res.groups">
+        <field name="name">Employee</field>
+    </record>
+
+    <record id="agreement.group_agreement_manager" model="res.groups">
+        <field name="name">Manager</field>
+    </record>
+
+</odoo>
